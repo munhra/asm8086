@@ -1,0 +1,75 @@
+Microsoft (R) Macro Assembler Version 5.00                  12/12/24 20:34:37
+                                                             Page     1-1
+
+
+				.386 
+				.model flat,stdcall 
+ 0000				.data 
+ 0000  0000			soma dw 0 
+ 0002  0A000000			myvar dd 10 
+ 0006  0B0000000000		myvar2 df 11 
+ 000C  02			myvar3 db 2 
+ 000D  0D00000000000000		myvar4 dq 13 
+ 0015  20000000000000000000	myvar5 dt 20 
+ 001F  EC			myvar6 db -20 
+ 0020  41			myvar7 db 'A' 
+ 0021  ????????			myvar8 dd ? 
+ 0025  0A0000000C0000000D00	mylist dd 10,12,13 
+       0000			
+				;list mylist db 10,20,30,40 
+ 0031  48 65 6C 6C 6F 20 57	myvar9 db "Hello World Variable",0  
+       6F 72 6C 64 20 56 61	
+       72 69 61 62 6C 65 00	
+ 0000				.code 
+ 0000				main PROC 
+ 0000  66| B8 0005		        mov ax, 5 
+ 0004  66| 05 0006		        add ax, 6 
+ 0008  66| A3 00000000 R	        mov soma, ax 
+ 000E  B4 4C			        mov ah, 04ch 
+ 0010  CD 21			        int 21h 
+ 0012				main ENDP 
+ 0012				END main 
+Microsoft (R) Macro Assembler Version 5.00                  12/12/24 20:34:37
+                                                             Symbols-1
+
+
+
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	32 Bit	0046	DWORD	PUBLIC	'DATA'
+_TEXT  . . . . . . . . . . . . .  	32 Bit	0012	DWORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	N PROC	0000	_TEXT	Length = 0012
+MYLIST . . . . . . . . . . . . .  	L DWORD	0025	_DATA
+MYVAR  . . . . . . . . . . . . .  	L DWORD	0002	_DATA
+MYVAR2 . . . . . . . . . . . . .  	L FWORD	0006	_DATA
+MYVAR3 . . . . . . . . . . . . .  	L BYTE	000C	_DATA
+MYVAR4 . . . . . . . . . . . . .  	L QWORD	000D	_DATA
+MYVAR5 . . . . . . . . . . . . .  	L TBYTE	0015	_DATA
+MYVAR6 . . . . . . . . . . . . .  	L BYTE	001F	_DATA
+MYVAR7 . . . . . . . . . . . . .  	L BYTE	0020	_DATA
+MYVAR8 . . . . . . . . . . . . .  	L DWORD	0021	_DATA
+MYVAR9 . . . . . . . . . . . . .  	L BYTE	0031	_DATA
+
+SOMA . . . . . . . . . . . . . .  	L WORD	0000	_DATA
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  sum		
+
+
+     24 Source  Lines
+     24 Total   Lines
+     25 Symbols
+
+  51142 + 465402 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

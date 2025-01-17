@@ -1,0 +1,45 @@
+    ======================================================================
+
+    Microsoft CodeView version 3.14 corrects a problem found in CodeView
+    version 3.10 that shipped with the BASIC Professional Development 
+    System version 7.1.  The problem can result in loss of data when 
+    CodeView 3.10 is used in conjunction with high memory drivers found 
+    in third party products, HIMEM.SYS, and a future version of DOS.
+
+    Use the UNPACK utility provided on this disk to install CodeView 3.14, 
+    then remove CodeView 3.10 from your hard drive.  For example, to 
+    install CodeView 3.14 in the default BC7.1 directory for DOS executables, 
+    place this disk in drive A and type the following:
+
+       > A:
+       > UNPACK CV.EX$ C:\BC7\BIN\CV.EXE
+
+    ======================================================================
+
+    Additional CodeView Notes:
+
+    Debugging Run-Time Module Programs with CodeView
+    ------------------------------------------------
+    The following steps must be taken in order to view the BASIC source code 
+    of a program that was compiled to use a run-time module (not compiled 
+    with /O option) in CodeView 3.14:
+
+    1. Start CodeView as usual (for example, type CV TEST.EXE).  The source 
+       window will only display the assembly listing for your program.
+
+    2. To display the BASIC source code for your program, choose the Open 
+       Source command from the File menu and open the BASIC source file for
+       the program.
+
+    3. To retain the BASIC source code listing throughout your debugging
+       session, set a breakpoint on the first line of the BASIC source code.
+       Each time you restart your program, CodeView will stop execution at
+       this breakpoint and load the BASIC source into memory for execution
+       tracing.
+
+    4. Run the program.  CodeView will stop execution at the breakpoint, but 
+       from then on will display BASIC source while you are debugging.  
+
+    Note, the preceding steps are not needed to view source code when using 
+    CodeView with stand-alone programs (compiled with /O option).
+
